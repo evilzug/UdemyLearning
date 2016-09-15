@@ -16,7 +16,6 @@ public class TextController : MonoBehaviour
         cell_mirror,
         sheets_1,
         lock_1,
-        freedom,
         corridor_0
     };
 
