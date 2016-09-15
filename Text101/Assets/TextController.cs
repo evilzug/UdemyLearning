@@ -16,7 +16,7 @@ public class TextController : MonoBehaviour
         cell_mirror,
         sheets_1,
         lock_1,
-        freedom
+        corridor_0
     };
 
     private States myState;
@@ -38,7 +38,7 @@ public class TextController : MonoBehaviour
         else if (myState == States.lock_1) { state_lock_1(); }
         else if (myState == States.mirror) { state_mirror(); }
         else if (myState == States.cell_mirror) { state_cell_mirror(); }
-        else if (myState == States.freedom) { state_freedom(); }
+        else if (myState == States.corridor_0) { state_cooridoor_0(); }
 
 	}
 
@@ -103,11 +103,11 @@ public class TextController : MonoBehaviour
                         "so you can see the lock. You can just make out fingerprints around " +
                         "the buttons. You press the dirty buttons, and hear a clock.\n\n" +
                         "Press O to Open, or R to return to your cell.";
-        if (Input.GetKeyDown(KeyCode.O)) { myState = States.freedom; }
+        if (Input.GetKeyDown(KeyCode.O)) { myState = States.corridor_0; }
         else if (Input.GetKeyDown(KeyCode.R)) { myState = States.cell_mirror; }
     }
 
-    void state_freedom()
+    void state_cooridoor_0()
     {
         text.text = "You are FREE!\n\n" +
                         "Press P to Play again!";
